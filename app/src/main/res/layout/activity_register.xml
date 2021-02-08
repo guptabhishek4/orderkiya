@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp"
+    tools:context=".Register">
+
+
+    <TextView
+        android:id="@+id/txtRegas"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#000000"
+        android:text="Register as"/>
+    <RadioGroup
+        android:id="@+id/rg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txtRegas"
+        android:orientation="horizontal"
+        >
+
+        <RadioButton
+            android:id="@+id/radiobt_customer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/radiobt_seller"
+            android:text="Customer"
+            android:onClick="onRadioButtonClicked"/>
+
+        <RadioButton
+            android:id="@+id/radiobt_seller"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/et_pass"
+            android:layout_marginLeft="20dp"
+            android:layout_centerHorizontal="true"
+            android:text="Seller"
+            android:onClick="onRadioButtonClicked"/>
+
+    </RadioGroup>
+
+
+    <EditText
+        android:id="@+id/et_name"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_below="@+id/rg"
+        android:layout_marginTop="17dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text=""
+        android:hint="Full name"
+        />
+
+    <EditText
+        android:id="@+id/et_mobile"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_below="@+id/et_name"
+        android:layout_alignStart="@id/et_name"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text=""
+        android:hint="Mobile Number"
+        tools:layout_editor_absoluteX="27dp"
+        tools:layout_editor_absoluteY="195dp" />
+
+    <EditText
+        android:id="@+id/et_add"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/et_mobile"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text=""
+        android:hint="Address"/>
+
+    <EditText
+        android:id="@+id/et_pass"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_alignStart="@+id/et_name"
+        android:layout_below="@+id/et_add"
+        android:ems="10"
+        android:inputType="textPassword"
+        android:text=""
+        android:hint="Password"/>
+
+    <Button
+        android:id="@+id/bt_reg"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_alignParentStart="true"
+        android:layout_centerVertical="true"
+        android:text="Register"
+        />
+
+
+</RelativeLayout>
